@@ -11,16 +11,16 @@ To compile we typed: gcc -std=c99 -Wall -Werror rexp.c stack.c tree.c (will not 
 
 The program outputs whether the expression typed by the user, is a valid Regular Expression or not. Part 1 stands for Recursive Descent Parsing, and Part 2 stands for Table Driven Parsing. Both Parts will always the same output, as they are just two different methods of doing the same thing. 
 Our programs used the following grammar to parse expressions and output whether an expression is regular or not:
-/*
-<E> -->   <C><ET>
-<ET> -->   |<E> | e
-<C> -->   <S><CT>
-<CT> -->   .<C> | e
-<S> -->    <A><ST>
-<ST> -->   *<ST> | e
-<A> -->   (<E>) | <X>
-<X> -->   a |b | c| ….| z
- */
+
+\<E> -->   <C><ET>
+\<ET> -->   |<E> | e
+\<C> -->   <S><CT>
+\<CT> -->   .<C> | e
+\<S> -->    <A><ST>
+\<ST> -->   *<ST> | e
+\<A> -->   (<E>) | <X>
+\<X> -->   a |b | c| ….| z
+ 
 
 The syntactic categories are named E for expression, C for concatenation, S for “star”
 (closure), A for atomic expression, and X for input symbol. The T versions of the
