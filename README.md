@@ -13,19 +13,25 @@ The program outputs whether the expression typed by the user, is a valid Regular
 Our programs used the following grammar to parse expressions and output whether an expression is regular or not:
 
 \<E> -->   \<C><ET>
+ 
 \<ET> -->   \|<E> | e
+ 
 \<C> -->   \<S><CT>
+ 
 \<CT> -->   \.<C> | e
+ 
 \<S> -->    \<A><ST>
+ 
 \<ST> -->   \*<ST> | e
+ 
 \<A> -->   \(<E>) | <X>
+ 
 \<X> -->   \a |b | c| ….| z
  
 
 The syntactic categories are named E for expression, C for concatenation, S for “star”
 (closure), A for atomic expression, and X for input symbol. The T versions of the
-categories are the “tail” productions created by left-factoring the grammar per FOCS
-Ex. 11.15.
+categories are the “tail” productions created by left-factoring the grammer.
 
 
 How we did Part 1:
