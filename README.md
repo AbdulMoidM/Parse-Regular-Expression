@@ -26,8 +26,6 @@ The syntactic categories are named E for expression, C for concatenation, S for 
 categories are the “tail” productions created by left-factoring the grammar per FOCS
 Ex. 11.15.
 
-
-
 How we did Part 1:
 Parse tree representation and functions (files, struct names, important functions): tree.c, tree.h
 Recursive-descent parsing functions: E(), ET(), C(), CT(), S(), ST(), A(), X()  (each function is made for one grammar rule)
